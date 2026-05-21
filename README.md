@@ -1,38 +1,76 @@
 # AI Reporting Analyst
 
-AI-powered analytics assistant for operational and ecommerce KPI workflows.
+Python-based reporting and analytics pipeline for extracting, standardising and consolidating semi-structured Excel reporting data.
 
 ## Overview
 
-This project explores how AI can augment commercial reporting and analytics workflows by allowing users to interact with KPI datasets using natural language.
+This project automates the ingestion and transformation of historical reporting files stored across complex Excel folder structures.
 
-The goal is to reduce repetitive manual analysis and improve decision-making by combining structured business data with LLM-powered insight generation.
+The pipeline is designed to handle semi-structured reporting workbooks that contain:
+- inconsistent layouts
+- changing worksheet names
+- subtotal/summary rows
+- evolving schemas
+- nested folder structures
+- historical reporting periods
 
-## Planned Features
+The goal is to convert manually maintained reporting files into clean analytical datasets suitable for:
+- reporting automation
+- analytics workflows
+- dashboarding
+- AI-assisted analysis
+- downstream data engineering pipelines
 
-- Natural language querying over KPI datasets
-- Automated performance summaries
-- Trend and anomaly detection
-- Multi-dashboard comparison
-- Executive reporting generation
-- AI-assisted operational analysis
+---
 
-## Example Questions
+## Features
 
-- Why did ROAS decrease this week?
-- Which channels drove the largest revenue increase?
-- What metrics changed unusually compared to last week?
-- Summarise this dashboard for leadership.
+- Automated Excel workbook ingestion
+- Weekly file detection and filtering
+- Dynamic worksheet detection
+- Historical season and period extraction
+- Semi-structured row parsing
+- Removal of totals and invalid rows
+- Zero-value filtering
+- Consolidated master dataset creation
+- Recovery extraction workflows for inconsistent files
+- Extraction logging and validation
 
-## Planned Tech Stack
+---
+
+## Technologies Used
 
 - Python
-- Streamlit
-- Pandas
-- OpenAI API
-- SQL
-- Vector search / RAG (future)
+- pandas
+- openpyxl
 
-## Current Status
+---
 
-Early-stage project planning and architecture design.
+## Example Workflow
+
+```text
+Excel Workbooks
+       ↓
+Folder Scanning
+       ↓
+Worksheet Detection
+       ↓
+Row Extraction
+       ↓
+Data Cleaning
+       ↓
+Validation & Logging
+       ↓
+Master Dataset Creation
+```
+
+
+## Current Focus
+
+Building scalable reporting pipelines and automation tooling for semi-structured operational data workflows.
+
+---
+
+## Disclaimer
+
+This repository contains generic extraction and transformation logic only.
